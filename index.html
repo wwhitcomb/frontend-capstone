@@ -11,8 +11,28 @@
 
 	<body>
 		
+		<h1 class="main-title">Quiz Time!</h1>
+		
+		<form action="#" class="main-form">
+			<label for="questions">Total Number of Questions:</label>
+			<input type="number" min="1" max="20" name="questions" value="10" class="question-number"> <br>
+			<label for="category">Pick Your Category</label>
+			<select name="category" id="category" class="question-category">
+				<option value="games">Games</option>
+				<option value="general">General Knowledge</option>
+			</select> <br>
+			<label for="difficulty">Pick Your Difficulty</label>
+			<select name="difficulty" id="difficulty" class="question-difficulty">
+				<option value="easy">Easy</option>
+				<option value="medium">Medium</option>
+				<option value="hard">Hard</option>
+			</select> <br>
+			<button type="submit">Start the Quiz</button>
+		</form>
 		
 		
+		
+		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 		<script src="app.js"></script>
 	</body>
 
