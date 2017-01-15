@@ -4,35 +4,53 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Quiz Time</title>
+		<title>Find Your Exercise</title>
 		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="showYtVideo.css">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 
 	<body>
 		
-		<h1 class="main-title">Quiz Time!</h1>
+		<h1 class="main-title">The Daily Grind</h1>
 		
-		<form action="#" class="main-form">
-			<label for="questions">Total Number of Questions:</label>
-			<input type="number" min="1" max="20" name="questions" value="10" class="question-number"> <br>
-			<label for="category">Pick Your Category</label>
-			<select name="category" id="category" class="question-category">
-				<option value="games">Games</option>
-				<option value="general">General Knowledge</option>
-			</select> <br>
-			<label for="difficulty">Pick Your Difficulty</label>
-			<select name="difficulty" id="difficulty" class="question-difficulty">
-				<option value="easy">Easy</option>
-				<option value="medium">Medium</option>
-				<option value="hard">Hard</option>
-			</select> <br>
-			<button type="submit">Start the Quiz</button>
-		</form>
+		<h2 class="inspirational-quote">Inspirational Quote goes here</h2>
 		
+		<h2>What would you like to work out today?</h2>
 		
-		
+		<div class="shoulders box" id="shoulder-workout">
+			<h1 class="workout-title">Shoulders</h1>
+		</div>
+		<div class="biceps box" id="bicep-workout">
+			<h1 class="workout-title">Biceps</h1>
+		</div>
+		<div class="forearms box" id="forearm-workout">
+			<h1 class="workout-title">Forearms</h1>
+		</div>
+		<div class="pecs box" id="pec-workout">
+			<h1 class="workout-title">Pecs</h1>
+		</div>
+		<div class="abs box" id="abs-workout">
+			<h1 class="workout-title">Abs</h1>
+		</div>
+		<div class="quads box" id="quads-workout">
+			<h1 class="workout-title">Quads</h1>
+		</div>
+		<div class="hamstrings box" id="hamstrings-workout">
+			<h1 class="workout-title">Hams</h1>
+		</div>
+		<div class="calves box" id="calves-workout">
+			<h1 class="workout-title">Calves</h1>
+		</div>
+		<div class="cardio box" id="cardio-workout">
+			<h1 class="workout-title">Cardio</h1>
+		</div>
+		<div class="random-xfit box" id="crossfit-workout">
+			<h1 class="workout-title">Random Crossfit</h1>
+		</div>
+	
 		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+		<script src="jquery.showYtVideo.js"></script>
 		<script src="app.js"></script>
 	</body>
 

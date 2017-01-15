@@ -1,27 +1,31 @@
-var TriviaMainUrl = 'https://www.opentdb.com/api.php';
+var YT_BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
 
-function getDataFromApi(totalQuestions, category, difficulty, callback) {
+function getDataFromApi(searchTerm, callback) {
   var query = {
-    amount: totalQuestions,
-    category: category,
-	difficulty: difficulty
-  }
-  $.getJSON(TriviaMainUrl, query, callback);
+	part: 'snippet',
+    key: 'AIzaSyBBBSjpMtDk0ESA3E4FPDbzb_qqO3s1B0g',
+	q: searchTerm,
+	maxResults: 1
+  	}
+  $.getJSON(YT_BASE_URL, query, callback);
 }
 
 
-function displayTriviaData(data) {
-    
-}
+function displayVideo(data) {
+  if (data.items) {
+         videoToPlay = data.items[0].id.videoId;
+    }
+	$.showYtVideo({ videoId: videoToPlay });
+  };
+  
 
-function watchSubmit() {
-  $('.main-form').submit(function(e) {
-    e.preventDefault();
-    var questions = $(this).find('.question-number').val();
-	var category = $(this).find('.question-category').val();
-	var difficulty = $(this).find('.question-difficulty').val();
-    getDataFromApi(questions, category, difficulty, displayTriviaData);
+function watchClick() {
+  $('.box').on('click', function(e) {
+	  e.preventDefault();
+	  var query = $(this).attr("id");
+	  getDataFromApi(query, displayVideo);
+	  
   });
 }
 
-$(function(){watchSubmit();});
+$(function(){watchClick();});

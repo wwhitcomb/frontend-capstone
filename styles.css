@@ -1,0 +1,11 @@
+.box {
+	width: 450px;
+	height: 100px;
+	background-color: lightgray;
+	margin: 10px auto;
+}
+
+.workout-title {
+	text-align: center;
+	line-height: 100px;
+}
