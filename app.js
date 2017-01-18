@@ -5,22 +5,24 @@ function getDataFromApi(searchTerm, callback) {
 	part: 'snippet',
     key: 'AIzaSyBBBSjpMtDk0ESA3E4FPDbzb_qqO3s1B0g',
 	q: searchTerm,
-	maxResults: 1
+	maxResults: 20
   	}
   $.getJSON(YT_BASE_URL, query, callback);
 }
 
 
+
 function displayVideo(data) {
+  var randNum = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
   if (data.items) {
-         videoToPlay = data.items[0].id.videoId;
+         videoToPlay = data.items[randNum].id.videoId;
     }
 	$.showYtVideo({ videoId: videoToPlay });
   };
   
 
 function watchClick() {
-  $('.box').on('click', function(e) {
+  $('.workout').on('click', function(e) {
 	  e.preventDefault();
 	  var query = $(this).attr("id");
 	  getDataFromApi(query, displayVideo);

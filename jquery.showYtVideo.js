@@ -42,7 +42,7 @@
                 + videoHeight
                 + '" src="https://www.youtube.com/embed/'
                 + options.videoId
-                + '" frameborder="0" allowfullscreen></iframe>');
+                + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
 
             iframe.appendTo(modal);      
         } else {
